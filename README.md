@@ -189,7 +189,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-Project Link: [https://github.com/yourusername/harry-potter-explorer](https://github.com/yourusername/harry-potter-explorer)
+Project Link: [https://github.com/siralexgrey/harry-potter-explorer](https://github.com/siralexgrey/harry-potter-explorer)
 
 ---
 
