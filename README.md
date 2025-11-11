@@ -68,6 +68,45 @@ npm run dev
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
 
+## 🚀 Deployment
+
+This project is configured for automatic deployment to GitHub Pages.
+
+### Live Demo
+
+🌐 **[View Live Application](https://siralexgrey.github.io/harry-potter-explorer/)**
+
+### Deploy to GitHub Pages
+
+The project includes a GitHub Actions workflow that automatically deploys to GitHub Pages on every push to the `main` branch.
+
+**Setup Steps:**
+
+1. Push your code to GitHub:
+
+```bash
+git remote add origin https://github.com/siralexgrey/harry-potter-explorer.git
+git branch -M main
+git push -u origin main
+```
+
+2. Enable GitHub Pages in your repository:
+   - Go to Settings → Pages
+   - Source: Select "GitHub Actions"
+   - The workflow will automatically deploy your site
+
+3. Access your deployed site at: `https://siralexgrey.github.io/harry-potter-explorer/`
+
+### Manual Deployment
+
+To deploy manually:
+
+```bash
+npm run build
+```
+
+Then upload the `dist` folder to your hosting provider.
+
 ## 🏗️ Project Structure
 
 ```
