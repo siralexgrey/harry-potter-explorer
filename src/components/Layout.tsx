@@ -16,7 +16,13 @@ const Layout: React.FC = () => {
     const location = useLocation()
 
     useEffect(() => {
-        setIsSidebarOpen(false)
+        const handleNavigationClose = () => {
+            if (window.innerWidth < 640) {
+                setIsSidebarOpen(false)
+            }
+        }
+
+        handleNavigationClose()
     }, [location.pathname])
 
     const toggleSidebar = () => {
