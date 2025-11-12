@@ -2,6 +2,7 @@ import React                from 'react'
 import { getSpells }        from '../api/hpApi'
 import Loader               from '../components/Loader'
 import SpellListItem        from '../components/SpellListItem'
+import SearchBar            from '../components/SearchBar'
 import useFetchData         from '../hooks/useFetchData'
 import type { Spell }       from '../types/spell'
 
@@ -24,15 +25,11 @@ const Spells: React.FC = () => {
         <div>
             <h1 className="text-3xl font-bold mb-6 text-gray-100">🪄 Spells</h1>
 
-            <div className="mb-6">
-                <input
-                    type="text"
-                    placeholder="Search by name or description..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-400"
-                />
-            </div>
+            <SearchBar
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Search by name or description..."
+            />
 
             {loading && <Loader />}
 
