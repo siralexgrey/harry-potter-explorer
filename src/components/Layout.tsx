@@ -1,11 +1,23 @@
-import React, { useState }  from 'react'
-import { Outlet }           from 'react-router-dom'
+import React,
+    {
+        useState,
+        useEffect
+}                           from 'react'
+import {
+    Outlet,
+    useLocation
+}                           from 'react-router-dom'
 import Sidebar              from './Sidebar'
 import Header               from './Header'
 import mainBg               from '../assets/images/main-bg.jpg'
 
 const Layout: React.FC = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+    const location = useLocation()
+
+    useEffect(() => {
+        setIsSidebarOpen(false)
+    }, [location.pathname])
 
     const toggleSidebar = () => {
         setIsSidebarOpen(prev => !prev)
