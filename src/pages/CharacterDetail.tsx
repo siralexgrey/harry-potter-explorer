@@ -29,11 +29,11 @@ const CharacterDetail: React.FC = () => {
                         <img
                             src={character.image}
                             alt={character.name}
-                            className="w-full md:w-96 h-64 md:h-96 object-cover rounded-lg shadow-xl shrink-0"
+                            className="w-full md:w-96 h-64 md:h-96 object-cover card shrink-0"
                             loading="lazy"
                         />
                     )}
-                    <div className="p-6 flex flex-col justify-center items-center md:items-start flex-1 bg-black/40 backdrop-blur-sm rounded-lg shadow-xl">
+                    <div className="p-6 flex flex-col justify-center items-center md:items-start flex-1 card-glass">
                         <h1 className="text-4xl font-bold mb-6 text-white text-center md:text-left">{character.name}</h1>
                         <div className="space-y-3 w-full">
                             <p className="text-lg text-gray-200 flex items-center gap-2">

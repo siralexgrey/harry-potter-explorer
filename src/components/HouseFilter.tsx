@@ -11,11 +11,7 @@ const HouseFilter: React.FC<HouseFilterProps> = ({ selectedHouse, onHouseChange 
         <div className="mb-6 flex flex-wrap gap-4">
             <button
                 onClick={() => onHouseChange(null)}
-                className={`px-4 py-2 rounded-lg font-semibold transition-colors border backdrop-blur-sm ${
-                    selectedHouse === null
-                        ? 'bg-yellow-600/80 hover:bg-yellow-700/80 border-yellow-500 text-white'
-                        : 'bg-black/40 hover:bg-black/60 border-gray-700 text-gray-300'
-                }`}
+                className={selectedHouse === null ? 'btn-primary' : 'btn-glass'}
             >
                 All Houses
             </button>
@@ -23,10 +19,10 @@ const HouseFilter: React.FC<HouseFilterProps> = ({ selectedHouse, onHouseChange 
                 <button
                     key={house}
                     onClick={() => onHouseChange(house)}
-                    className={`px-4 py-2 rounded-lg font-semibold transition-colors border backdrop-blur-sm text-white ${
+                    className={`btn ${
                         selectedHouse === house
                             ? getHouseColor(house, 'background')
-                            : 'bg-black/40 hover:bg-black/60 border-gray-700 text-gray-300'
+                            : 'btn-glass'
                     }`}
                 >
                     {house}
@@ -34,11 +30,11 @@ const HouseFilter: React.FC<HouseFilterProps> = ({ selectedHouse, onHouseChange 
             ))}
             <button
                 onClick={() => onHouseChange('N/A')}
-                className={`px-4 py-2 rounded-lg font-semibold transition-colors border backdrop-blur-sm ${
+                className={
                     selectedHouse === 'N/A'
-                        ? 'bg-gray-600/80 hover:bg-gray-700/80 border-gray-500 text-white'
-                        : 'bg-black/40 hover:bg-black/60 border-gray-700 text-gray-300'
-                }`}
+                        ? 'btn bg-gray-600/80 hover:bg-gray-700/80 border-gray-500 text-white'
+                        : 'btn-glass'
+                }
             >
                 N/A
             </button>

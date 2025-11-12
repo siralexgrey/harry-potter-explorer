@@ -1,5 +1,72 @@
 @import "tailwindcss";
 
+@layer components {
+  /* Glass effect components */
+  .glass-light {
+      @apply bg-black/30 backdrop-blur-md;
+  }
+
+  .glass-base {
+      @apply bg-black/40 backdrop-blur-sm;
+  }
+
+  .glass-dark {
+      @apply bg-black/60 backdrop-blur-sm;
+  }
+
+  /* Button components */
+  .btn {
+      @apply px-4 py-2 rounded-lg font-semibold transition-colors border backdrop-blur-sm;
+  }
+
+  .btn-glass {
+      @apply px-4 py-2 rounded-lg font-semibold transition-colors border backdrop-blur-sm bg-black/40 hover:bg-black/60 border-gray-700 text-white;
+  }
+
+  .btn-icon {
+      @apply p-2 bg-black/40 backdrop-blur-sm hover:bg-black/60 text-white rounded-md transition-colors border border-gray-700;
+  }
+
+  .btn-primary {
+      @apply px-4 py-2 rounded-lg font-semibold transition-colors border backdrop-blur-sm bg-yellow-600/80 hover:bg-yellow-700/80 border-yellow-500 text-white;
+  }
+
+  /* Card/Panel components */
+  .card {
+      @apply rounded-lg shadow-xl;
+  }
+
+  .card-glass {
+      @apply rounded-lg shadow-xl bg-black/40 backdrop-blur-sm;
+  }
+
+  /* Input components */
+  .input {
+      @apply w-full px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-400;
+  }
+
+  .input-icon {
+      @apply w-full pl-10 pr-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-400;
+  }
+
+  /* Typography components */
+  .page-title {
+      @apply text-3xl font-bold mb-6 text-gray-100;
+  }
+
+  .heading {
+      @apply text-2xl font-bold text-white;
+  }
+
+  .text-body {
+      @apply text-gray-200;
+  }
+
+  .text-muted {
+      @apply text-gray-400;
+  }
+}
+
 body {
   margin: 0;
   min-width: 320px;

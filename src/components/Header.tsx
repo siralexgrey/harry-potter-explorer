@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleSidebar, isSidebarOpen, title }
             {!isSidebarOpen && (
                 <button
                     onClick={onToggleSidebar}
-                    className="p-2 bg-black/40 backdrop-blur-sm hover:bg-black/60 text-white rounded-md transition-colors border border-gray-700"
+                    className="btn-icon"
                     aria-label="Toggle sidebar"
                 >
                     <HiMenuAlt3 size={24} />
@@ -32,14 +32,14 @@ const Header: React.FC<HeaderProps> = ({ onToggleSidebar, isSidebarOpen, title }
                 {!isHomePage && (
                     <button
                         onClick={() => navigate(-1)}
-                        className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white rounded hover:bg-black/60 transition-colors border border-gray-700"
+                        className="btn-glass rounded"
                     >
                         ← Back
                     </button>
                 )}
 
                 {title && (
-                    <h1 className="text-3xl font-bold text-gray-100">
+                    <h1 className="page-title mb-0">
                         {title}
                     </h1>
                 )}

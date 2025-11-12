@@ -23,7 +23,7 @@ const Spells: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold mb-6 text-gray-100">🪄 Spells</h1>
+            <h1 className="page-title">🪄 Spells</h1>
 
             <SearchBar
                 value={searchQuery}

@@ -37,7 +37,7 @@ const Characters: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold mb-6 text-gray-100">🧍‍♂️ Characters</h1>
+            <h1 className="page-title">🧍‍♂️ Characters</h1>
 
             <SearchBar
                 value={searchQuery}

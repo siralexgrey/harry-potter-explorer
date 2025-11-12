@@ -16,7 +16,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChange, placeholder = "S
                 placeholder={placeholder}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-400 relative"
+                className="input-icon relative"
             />
         </div>
     )
