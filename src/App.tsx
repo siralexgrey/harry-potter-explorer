@@ -8,20 +8,17 @@ import Characters       from './pages/Characters'
 import CharacterDetail  from './pages/CharacterDetail'
 import Spells           from './pages/Spells'
 import Layout           from './components/Layout'
-import { SidebarProvider } from './contexts/SidebarContext'
 
 function App() {
   return (
-    <SidebarProvider>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="characters" element={<Characters />} />
-          <Route path="characters/:id" element={<CharacterDetail />} />
-          <Route path="spells" element={<Spells />} />
-        </Route>
-      </Routes>
-    </SidebarProvider>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="characters" element={<Characters />} />
+        <Route path="characters/:id" element={<CharacterDetail />} />
+        <Route path="spells" element={<Spells />} />
+      </Route>
+    </Routes>
   )
 }
 

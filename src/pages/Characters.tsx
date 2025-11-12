@@ -4,7 +4,6 @@ import { getCharacters }        from '../api/hpApi'
 import useFetchData             from '../hooks/useFetchData'
 import Loader                   from '../components/Loader'
 import CharacterCard            from '../components/CharacterCard'
-import PageTitle                from '../components/PageTitle'
 import {
     getHouseColor,
     HOUSES
@@ -40,7 +39,7 @@ const Characters: React.FC = () => {
 
     return (
         <div>
-            <PageTitle>🧍‍♂️ Characters</PageTitle>
+            <h1 className="text-3xl font-bold mb-6 text-gray-100">🧍‍♂️ Characters</h1>
 
             <div className="mb-6">
                 <input

@@ -3,10 +3,7 @@ import {
     NavLink,
     Link
 }                               from "react-router-dom"
-import {
-    HiMenuAlt3,
-    HiX
-}                               from "react-icons/hi"
+import { HiX }                  from "react-icons/hi"
 import hogwartsLogo             from '../assets/images/hogwarts-logo.png'
 
 interface SidebarProps {
@@ -26,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                     <button
                         onClick={onToggle}
                         className="p-2 hover:bg-black/40 backdrop-blur-sm rounded-md transition-colors"
-                        aria-label="Toggle sidebar"
+                        aria-label="Close sidebar"
                     >
                         <HiX size={24} />
                     </button>
@@ -55,15 +52,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                     </NavLink>
                 </nav>
             </aside>
-            {!isOpen && (
-                <button
-                    onClick={onToggle}
-                    className="fixed top-6 left-6 z-50 p-2 bg-black/40 backdrop-blur-sm hover:bg-black/60 text-white rounded-md transition-colors border border-gray-700"
-                    aria-label="Toggle sidebar"
-                >
-                    <HiMenuAlt3 size={24} />
-                </button>
-            )}
             {isOpen && (
                 <div
                     onClick={onToggle}

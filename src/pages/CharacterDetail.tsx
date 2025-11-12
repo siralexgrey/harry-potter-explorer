@@ -1,19 +1,12 @@
 import React                    from 'react'
-import {
-    useParams,
-    useNavigate
-}                               from 'react-router-dom'
+import { useParams }            from 'react-router-dom'
 import type { Character }       from '../types/character'
 import { getCharacterById }     from '../api/hpApi'
 import useFetchData             from '../hooks/useFetchData'
 import Loader                   from '../components/Loader'
-import { useSidebar }           from '../contexts/SidebarContext'
 import { getHouseColor }        from '../utils/houseColors'
 
 const CharacterDetail: React.FC = () => {
-    const navigate = useNavigate()
-    const { isSidebarOpen } = useSidebar()
-
     const { id } = useParams<{ id: string }>()
 
     const fetcher = React.useCallback(() => getCharacterById(id!), [id])
@@ -21,12 +14,6 @@ const CharacterDetail: React.FC = () => {
 
     return (
         <div className="max-w-full">
-            <button
-                onClick={() => navigate(-1)}
-                className={`mb-4 px-4 py-2 bg-black/40 backdrop-blur-sm text-white rounded hover:bg-black/60 transition-colors border border-gray-700 ${!isSidebarOpen ? 'ml-14' : ''}`}
-            >
-                ← Back
-            </button>
 
             {loading && <Loader />}
 

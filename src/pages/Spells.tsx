@@ -1,7 +1,6 @@
 import React                from 'react'
 import { getSpells }        from '../api/hpApi'
 import Loader               from '../components/Loader'
-import PageTitle            from '../components/PageTitle'
 import SpellListItem        from '../components/SpellListItem'
 import useFetchData         from '../hooks/useFetchData'
 import type { Spell }       from '../types/spell'
@@ -23,7 +22,7 @@ const Spells: React.FC = () => {
 
     return (
         <div>
-            <PageTitle>🪄 Spells</PageTitle>
+            <h1 className="text-3xl font-bold mb-6 text-gray-100">🪄 Spells</h1>
 
             <div className="mb-6">
                 <input
